@@ -1,0 +1,24 @@
+class A:
+     def __init__(self):
+          print("class A")
+
+
+class B(A):
+     def __init__(self):
+          print("class B")
+          A.__init__(self)
+
+class C(B):
+     def __init__(self):
+          print("class C")
+          B.__init__(self)
+
+
+class D(C, B):
+     def __init__(self):
+          print("class D")
+          super().__init__()   #super function double calling off kore
+
+
+object_c = C()
+object_D = D()
