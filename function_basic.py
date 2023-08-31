@@ -51,6 +51,55 @@ def Add(a, b):
 print(Add(10, 20))
 print(Add.__doc__)
 
+# lambda function
+def cube(y):
+  return y * y * y
+
+print(cube(5))
+
+lambda_cube = lambda y: y * y * y
+
+# using the lambda function
+print(lambda_cube(6))
+
+
+# map function
+def myfunc(a):
+  return len(a)
+
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+print(list(x))
+
+
+def square(x):
+    return x*x
+
+num = [1, 2, 3, 4, 5]
+result = list(map(square, num))
+
+print(result)
+
+
+# filter function
+ages = [5, 12, 17, 18, 24, 32]
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+# adults = list(filter(myFunc, ages))
+adults = tuple(filter(myFunc, ages))
+print(adults)
+
+
+num = [5, 12, 17, 18, 25, 32]
+
+result = list(filter(lambda x: x%2==0, num))
+
+print(result)
+print(num)
+
 
 
 # Generator
@@ -76,8 +125,3 @@ print(fact(10))
 
 
 # arg and **kwarg
-def  a(fname, **lname):
-   fname= "ila"+ lname
-   return 
-
-print(a(1,2.100,25,75))
