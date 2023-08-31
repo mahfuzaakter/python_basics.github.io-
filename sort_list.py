@@ -1,29 +1,16 @@
-num = [9,2,7,4,6,8,3,5,1]
+def ascending(List):
+    sort_list=sorted(List)
+    return sort_list
 
-num.sort()
-print(num)
+List = [1, 5, 2, 9, 3, 22, 13]
+sort_list= ascending(List)
+print(sort_list)
 
-another_num = [9,2,7,4,6,8,3,5,1]
-sorted_num= sorted(another_num)
-print(sorted_num)
+# def sort_ascending(input_list):
+#     sorted_list = sorted(input_list)
+#     return sorted_list
 
-
-#copy list using .copy() method
-numb = [9,2,7,4,6,8,3,5,1]
-
-another_num= numb.copy()
-print(another_num)
-
-
-copy_num =list(numb)
-print(copy_num)
-
-
-slice_num= numb[5::1]
-print(slice_num)
-
-
-#join list
-
-merged_list = num + numb
-print(merged_list)
+# input_list = [1, 5, 2, 9, 3, 22, 13]
+# sorted_list = sort_ascending(input_list)
+# print("Original List:", input_list)
+# print("Sorted List:", sorted_list)
